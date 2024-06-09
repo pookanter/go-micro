@@ -10,7 +10,7 @@ import (
 
 func main() {
 	router := http.NewServeMux()
-	router.HandleFunc("/health", handler.HealthCheck)
+	router.HandleFunc("/", handler.HealthCheck)
 
 	port, err := os.LookupEnv("PORT")
 	if !err {
@@ -22,6 +22,7 @@ func main() {
 		Handler: router,
 	}
 
-	log.Fatal(server.ListenAndServe())
 	fmt.Println("App2 is running on port: ", port)
+
+	log.Fatal(server.ListenAndServe())
 }

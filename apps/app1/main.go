@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-micro/apps/app1/handler"
+	"app1/handler"
 	"log"
 	"net/http"
 )

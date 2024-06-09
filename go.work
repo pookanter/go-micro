@@ -3,5 +3,5 @@ go 1.22.3
 use (
 	./apps/app1
 	./apps/app2
-	./modules
+	./modules/db
 )

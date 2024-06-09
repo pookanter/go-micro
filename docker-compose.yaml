@@ -1,0 +1,11 @@
+services:
+  app1:
+    build:
+      context: ./apps/app1
+      dockerfile: Dockerfile
+    environment:
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./apps/app1:/app
